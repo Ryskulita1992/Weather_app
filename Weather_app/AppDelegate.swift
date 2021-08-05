@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Weather_app
 //
-//  Created by admin on 03.08.2021.
+//  Created by admin on 04.08.2021.
 //
 
 import UIKit
@@ -10,9 +10,15 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = UINavigationController(rootViewController: WeatherViewController())
+         window.makeKeyAndVisible()
+        
+        self.window = window
         // Override point for customization after application launch.
         return true
     }
